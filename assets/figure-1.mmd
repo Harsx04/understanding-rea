@@ -1,0 +1,7 @@
+flowchart TD
+    A["Program source"] --> B["Java compilation"]
+    A --> C["C or C++ compilation and linking"]
+    B --> D["Class files: JVM bytecode and metadata"]
+    D --> E["JVM execution"]
+    C --> F["Native executable"]
+    F --> G["Operating system loads; CPU executes"]

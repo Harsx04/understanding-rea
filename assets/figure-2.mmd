@@ -1,0 +1,9 @@
+flowchart TD
+    U["User: question and target"] --> H["Coding agent host: model and MCP client"]
+    H -->|"Tool request over MCP"| R["REA MCP server"]
+    R -->|"Supported operation"| A["Built-in reader or external analysis provider"]
+    A -->|"Inspect or interact as configured"| T["Target artifact or running software"]
+    T -->|"Code, metadata, or observations"| A
+    A -->|"Analysis results"| R
+    R -->|"Findings and limitations"| H
+    H -->|"Explanation or next question"| U
